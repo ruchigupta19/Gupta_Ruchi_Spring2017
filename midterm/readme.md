@@ -11,7 +11,7 @@ The enron data-set is available at CMU Enron data 1.82 GB tgz file .
 You do not need to upload this data in your repository. TA will have their own local copy of the data at ~/midterm/data/enron/maildir/*. So use this relative path for storing your data.
 $ mkdir -p ~/midterm/data/enron/
 $ cd ~/midterm/data/enron/
-# Download it manually (faster) and unzip it or use below command (slower)
+Download it manually (faster) and unzip it or use below command (slower)
 $ curl -O https://www.cs.cmu.edu/~./enron/enron_mail_20150507.tgz
 You can do any analysis of your choice. A better analysis is one which gives useful information.
 
