@@ -55,9 +55,42 @@ Total negative counts:
 
 ## Analysis -3 
 
-In
+The data recieved from Archive API have many different years and months.Hence I gathered all the data for the **last 6 months and analyzed** the same.
 
+```
+['2016-09', '2016-10', '2016-11', '2016-12', '2017-01', '2017-02']
+```
+I fetched unique section names for all years and their count which looks like this:
 
+```
+2016_09
+[('World', 12180), ('U.S.', 11860), ('Opinion', 11460), ('Fashion & Style', 10920), ('Arts', 9700)]
+2016_10
+{'U.S.': 13040, 'Fashion & Style': 7320, 'T Magazine': 2600, 'World': 11280, 'Sports': 9540, 'Times Insider': 880, 'Style': 600, 'Arts': 10160, 'NYT Now': 160, 'Health': 560, 'Opinion': 13140, 'Corrections': 620, 'Crosswords & Games': 940, 'N.Y. / Region': 6160, 'Today’s Paper': 620, 'Business Day': 8660, 'The Upshot': 1100, 'Theater': 2180, 'Technology': 2440, 'Science': 1800, 'Books': 3640, 'Movies': 2780, 'Food': 2340, 'Travel': 1680, 'Briefing': 1480, 'Real Estate': 2140, 'Sunday Review': 40, 'Job Market': 280, 'Magazine': 1480, 'Multimedia/Photos': 460, 'The Learning Network': 1980, 'Blogs': 600, 'Well': 1680, 'Podcasts': 240, 'Your Money': 560, 'Public Editor': 100, 'Automobiles': 220, 'Universal': 100, 'Obituaries': 80, 'Admin': 20, 'Education': 60, 'Watching': 120, 'Giving': 40}
+2016_11
+{'World': 10320, 'N.Y. / Region': 6120, 'Arts': 8920, 'Business Day': 7880, 'Well': 1260, 'Theater': 1780, 'Sports': 7380, 'Fashion & Style': 5280, 'U.S.': 12480, 'Technology': 2180, 'Briefing': 1760, 'Blogs': 580, 'The Upshot': 1960, 'Movies': 2780, 'Watching': 560, 'Books': 3680, 'Opinion': 12320, 'Food': 2200, 'Science': 1520, 'Education': 280, 'T Magazine': 2200, 'Real Estate': 2180, 'Style': 700, 'Times Insider': 800, 'The Learning Network': 1920, 'Podcasts': 320, 'Travel': 1300, 'NYT Now': 80, 'Magazine': 1700, 'Multimedia/Photos': 720, 'Universal': 120, 'Health': 700, 'Corrections': 580, 'Crosswords & Games': 780, 'Today’s Paper': 560, 'Your Money': 940, 'Giving': 180, 'Automobiles': 160, 'Public Editor': 200, 'Job Market': 160, 'Sunday Review': 80, 'Admin': 20, 'Obituaries': 20}
+```
+
+I fetched top 5 sections for 2016_09 and analyzed their trend over 6 months
+
+```
+2016_09
+[('Arts', 9700), ('Fashion & Style', 10920), ('Opinion', 11460), ('U.S.', 11860), ('World', 12180)]
+2016_10
+[('Arts', 10160), ('Fashion & Style', 7320), ('Opinion', 13140), ('U.S.', 13040), ('World', 11280)]
+2016_11
+[('Arts', 8920), ('Fashion & Style', 5280), ('Opinion', 12320), ('U.S.', 12480), ('World', 10320)]
+2016_12
+[('Arts', 8620), ('Fashion & Style', 4180), ('Opinion', 11760), ('U.S.', 9100), ('World', 11840)]
+2017_01
+[('Arts', 8799), ('Fashion & Style', 6216), ('Opinion', 11718), ('U.S.', 15624), ('World', 10920)]
+2017_02
+[('Arts', 8960), ('Fashion & Style', 7220), ('Opinion', 9960), ('U.S.', 10700), ('World', 9580)]
+```
+
+and the graphical visualization fro the same is:
+
+![alt tag](https://github.com/ruchigupta19/Gupta_Ruchi_Spring2017/blob/master/midterm/Question2/output/grouped-bar.PNG)
 
 
 
