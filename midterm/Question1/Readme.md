@@ -1,8 +1,8 @@
 # Performed Analysis on Enron data-set
 
-## So Greg Whalley: "Traior or Trader??"
+## So Greg Whalley: "Traitor or Trader??"
 
-Greg whalley was one of the central characters in the Enron drama.He was never called in the coutroom although he was on a list.Hence it was always a mystry whether Greg was involved in the Enron Scandal or not?
+Greg whalley was one of the central characters in the Enron drama.He was never called in the courtroom although he was on a list.Hence it was always a mystery whether Greg was involved in the Enron Scandal or not?
 
 ## Analysis-1
 
