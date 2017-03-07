@@ -1,7 +1,10 @@
 # Performed Analysis on Enron data-set
 
-## Analysis-1
+## So Greg Whalley: "Traior or Trader??"
 
+Greg whalley was one of the central characters in the Enron drama.He was never called in the coutroom although he was on a list.Hence it was always a mystry whether Greg was involved in the Enron Scandal or not?
+
+## Analysis-1
 
 **ANDREW FASTOW**, the CFO of Enron was one on the main culprits and I analyzed **with whom he was in contact and to whom he has been sending emails and recieving them from** and the analysis states that:
 
@@ -130,5 +133,11 @@ and the plot for the same
 ![alt tag](https://github.com/ruchigupta19/Gupta_Ruchi_Spring2017/blob/master/midterm/Question1/Output/Word_freq_kenneth.PNG)
 
 It can be analyzed that the most talked about words are Program, Associate/Analyst, Enron.
+
+So Greg Walley: "Traior or Trader??"
+While doing the analysis on emails sent by Andrew Fastow and Kenneth Lay, the maximum number of emails were sent to Greg Whalley and When those emails were analyzed nothing suspicious/fraudulent was found.
+
+### This can be further analyzed by going through all the emails sent out by Greg Walley.
+
 
 
