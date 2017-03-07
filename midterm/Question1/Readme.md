@@ -25,7 +25,7 @@ top recipients of Andrew Fastow
 [('greg.whalley@enron.com', 2), ('jeff.skilling@enron.com', 1)]
 ```
 
-It can be analyzed that Andrew Fastow dint sent out many emails but he did sent out 3 emails and 2 of them were for **greg.whalley@enron.com**.Hence I decided to analyze it further to **findout major keywords and talked about things** in these 2 emails.
+It can be analyzed that Andrew Fastow didn't sent out many emails but he did sent out 3 emails and 2 of them were for **greg.whalley@enron.com**.Hence I decided to analyze it further to **findout major keywords and talked about things** in these 2 emails.
 
 ```
 ('petrobras', 26)
@@ -134,7 +134,7 @@ and the plot for the same
 
 It can be analyzed that the most talked about words are Program, Associate/Analyst, Enron.
 
-So Greg Walley: "Traior or Trader??"
+So Greg Walley: "Traitor or Trader??"
 While doing the analysis on emails sent by Andrew Fastow and Kenneth Lay, the maximum number of emails were sent to Greg Whalley and When those emails were analyzed nothing suspicious/fraudulent was found.
 
 ### This can be further analyzed by going through all the emails sent out by Greg Walley.
