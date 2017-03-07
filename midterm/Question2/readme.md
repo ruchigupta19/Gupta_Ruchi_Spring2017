@@ -16,9 +16,35 @@ While analyzing Article search data I first collected all the **unique section n
 
 It can be seen that the **maximum number of articles are on world's news**.So the world's news articles can be analyzed closely to get further information and deep dived into all the subsections this section have, plotted a graph for the same:
 
+```
+U.S.
+[None, 'Politics']
+World
+['Middle East', 'Asia Pacific', 'Europe', 'Africa', 'Americas', None, 'Canada']
+Sports
+['College Basketball', None, 'Golf', 'Cricket', 'Soccer', 'Pro Basketball', 'Baseball', 'Olympics', 'Hockey', 'Pro Football', 'Tennis', 'Rugby', 'Cycling', 'Skiing', 'College Football']
+Business Day
+[None, 'DealBook', 'Retirement', 'Energy & Environment ', 'Economy', 'Media']
+Arts
+['Television', None, 'Music', 'Dance', 'Art & Design']
+```
+
 ![alt tag](https://github.com/ruchigupta19/Gupta_Ruchi_Spring2017/blob/master/midterm/Question2/output/pie-chart.PNG)
 
 It can be seen that under world section category, **Europe subsection has the maximum number of articles**. We can deep dive into the main headlines of Europe subcategory to know more about its articles.So I fetched all the headlines for Section world and subsection Europe.
+
+```
+('eu', 17)
+('say', 16)
+('french', 11)
+('talk', 10)
+('leader', 8)
+('fillon', 8)
+('ireland', 7)
+('turkey', 7)
+('chief', 7)
+('candidate', 7)
+```
 
 ![alt tag](https://github.com/ruchigupta19/Gupta_Ruchi_Spring2017/blob/master/midterm/Question2/output/word-freq.PNG)
 
@@ -50,6 +76,11 @@ Total postive counts:
 97
 Total negative counts:
 27
+
+Percentage of negative sentiments
+21.774193548387096
+Percentage of positive sentiments
+78.2258064516129
 
 ### From all the articles on Europe total positive count is 97 and total negative coint of articles is 27
 
@@ -88,7 +119,7 @@ I fetched top 5 sections for 2016_09 and analyzed their trend over 6 months
 [('Arts', 8960), ('Fashion & Style', 7220), ('Opinion', 9960), ('U.S.', 10700), ('World', 9580)]
 ```
 
-and the graphical visualization fro the same is:
+and the graphical visualization for the same is:
 
 ![alt tag](https://github.com/ruchigupta19/Gupta_Ruchi_Spring2017/blob/master/midterm/Question2/output/grouped-bar.PNG)
 
