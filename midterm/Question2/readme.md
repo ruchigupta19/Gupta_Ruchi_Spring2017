@@ -77,10 +77,8 @@ Total postive counts:
 Total negative counts:
 27
 
-Percentage of negative sentiments
-21.774193548387096
-Percentage of positive sentiments
-78.2258064516129
+- Percentage of negative sentiments : 21.774193548387096
+- Percentage of positive sentiments : 78.2258064516129
 
 ### From all the articles on Europe total positive count is 97 and total negative coint of articles is 27
 
