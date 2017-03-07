@@ -127,8 +127,8 @@ I decided to analyze it further to findout major keywords and talked about thing
 ```
 and the plot for the same
 
+![alt tag](https://github.com/ruchigupta19/Gupta_Ruchi_Spring2017/blob/master/midterm/Question1/Output/Word_freq_kenneth.PNG)
 
-
-
+It can be analyzed that the most talked about words are Program, Associate/Analyst, Enron.
 
 
