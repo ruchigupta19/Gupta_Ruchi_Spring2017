@@ -109,6 +109,26 @@ top recipients of Kenneth lay
 ------------------------------------------
 [("erica.adams@enron.com, john.addison@enron.com, matthew.almy@enron.com, \n\thector.alviar@enron.com, chuck.ames@enron.com, \n\tmatt.anderson@enron.com, james.bakondy@enron.com, \n\thicham.benjelloun@enron.com, shelia.benke@enron.com, \n\tchristina.benkert@enron.com, peter.bennett@enron.com, \n\taaron.berutti@enron.com, laura.bosek@enron.com, \n\tedward.brady@enron.com, erika.breen@enron.com, \n\tmara.bronstein@enron.com, samantha.bryce@enron.com, \n\tbali.bukenya@enron.com, bart.burk@enron.com, \n\tcatalina.cardenas@enron.com, tobin.carlson@enron.com, \n\tmonika.causholli@enron.com, brandon.cavazos@enron.com, \n\tsheila.chang@enron.com, bonnie.chang@enron.com, \n\tgabriel.chavez@enron.com,
 ```
+I decided to analyze it further to findout major keywords and talked about things in these emails and the most common words found were :
+
+```
+('program', 13)
+('associate/analyst', 8)
+('enron', 8)
+('one', 4)
+('company', 4)
+('--', 4)
+('purpose', 3)
+("''", 3)
+('committee', 3)
+('afl-cio', 3)
+('ken', 2)
+('lay', 2)
+```
+and the plot for the same
+
+
+
 
 
 
