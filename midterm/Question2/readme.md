@@ -2,11 +2,11 @@
 
 I fetched the data from Article search API and Archive API with the help of requests library using the following code and stored them at a proper location:
 
-'''
+```
 apikey_parameter={'api-key':os.environ['auth_key'],'page':i}
 time.sleep(4)                                         
 response_articlesearch=requests.get('https://api.nytimes.com/svc/search/v2/articlesearch.json',params=apikey_parameter)
-'''
+```
 
 ## Analysis - 1
 
