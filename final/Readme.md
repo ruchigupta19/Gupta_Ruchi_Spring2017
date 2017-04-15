@@ -43,7 +43,8 @@ From these people aboard the year in which maximum people died was 1972 as that 
 
 To find out worst year of Aviation Industry I merged all 4 Dataframes :
 
-`mergeDF1=pd.merge(planesCrashedPerYear_Output_DF,pplAboardPerYear_Output_DF,on='Year')
- mergeDF2=pd.merge(pplDeadPerYear_Output_DF,pplSurvivedPerYear_Output_DF,on='Year')
- mergeDF3=pd.merge(mergeDF1,mergeDF2,on='Year')
-`
+```
+mergeDF1=pd.merge(planesCrashedPerYear_Output_DF,pplAboardPerYear_Output_DF,on='Year')
+mergeDF2=pd.merge(pplDeadPerYear_Output_DF,pplSurvivedPerYear_Output_DF,on='Year')
+mergeDF3=pd.merge(mergeDF1,mergeDF2,on='Year')
+```
