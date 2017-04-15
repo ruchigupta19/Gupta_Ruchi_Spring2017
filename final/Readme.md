@@ -20,11 +20,17 @@ I have added few more columns to the original dataset for further Analysis.
 
 ## ANALYSIS -1 ##
 
+## Worst year for Aviation Industry?
+
 Analysis-1 is based on total Statistics of the dataset which explains the following facts:
 
-* the planes crashed per year
+* planes crashed per year
 * people aboard per year during crashes
 * people dead per year during crashes
 * people survived per year during crashes
 
 ![alt tag](https://github.com/ruchigupta19/Gupta_Ruchi_Spring2017/blob/master/final/Analysis1Graphs/conbine.jpg)
+
+It can be analyzed that the maximum number of planes were crashed in the year 1972 and the number was 104.Next analysis shows us total number of people aboard and the maximum number of people abored in those planes which were crashed was 3643 in the year 1989.From these people aboard the year in which maximum people died was 1972 as that year suffered from maximum fatalities i.e. 2937 and the year in which maximum number of people survived these plane crashes was 1999 and the number was 1788.
+
+** All these factors will help us to find out which year was the worst year for aviation industry.**
