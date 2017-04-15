@@ -40,3 +40,11 @@ Next analysis shows us total number of people aboard and the maximum number of p
 From these people aboard the year in which maximum people died was 1972 as that year suffered from maximum fatalities i.e. 2937 and the year in which maximum number of people survived these plane crashes was 1999 and the number was 1788.
 
 **All these factors will help us to find out which year was the worst year for aviation industry.**
+
+To find out worst year of Aviation Industry I merged all 4 Dataframes :
+
+`mergeDF1=pd.merge(planesCrashedPerYear_Output_DF,pplAboardPerYear_Output_DF,on='Year')
+mergeDF2=pd.merge(pplDeadPerYear_Output_DF,pplSurvivedPerYear_Output_DF,on='Year')
+mergeDF3=pd.merge(mergeDF1,mergeDF2,on='Year')
+mergeDF3=mergeDF3.rename(columns={'Index_col':'Crashes'})
+mergeDF3.head()`
