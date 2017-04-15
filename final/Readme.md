@@ -1,4 +1,4 @@
-# Overview #
+# AIRPLANE CRASHES AND FATALITIES ANALYSIS #
 
 This Analysis is done on the public dataset **AIRPLANE CRASHES AND FATALITIES SINCE 1908**.My data consists of 5268 observations and 13 variables and it represents the full history of airplanes crashes throughout the world:
 
