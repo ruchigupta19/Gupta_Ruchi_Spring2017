@@ -25,3 +25,5 @@ Below plotted graph explains:
 * people aboard per year during crashes
 * people dead per year during crashes
 * people survived per year during crashes
+
+![alt tag](https://github.com/ruchigupta19/Gupta_Ruchi_Spring2017/blob/master/final/Analysis1Graphs/conbine.jpg)
