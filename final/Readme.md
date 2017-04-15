@@ -20,7 +20,8 @@ I have added few more columns to the original dataset for further Analysis.
 
 ## ANALYSIS -1 ##
 
-Below plotted graph explains:
+Analysis-1 is based on total Statistics of the dataset which explains the following facts:
+
 * the planes crashed per year
 * people aboard per year during crashes
 * people dead per year during crashes
