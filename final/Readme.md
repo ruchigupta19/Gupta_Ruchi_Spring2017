@@ -47,4 +47,15 @@ To find out worst year of Aviation Industry I merged all 4 Dataframes :
 mergeDF1=pd.merge(planesCrashedPerYear_Output_DF,pplAboardPerYear_Output_DF,on='Year')
 mergeDF2=pd.merge(pplDeadPerYear_Output_DF,pplSurvivedPerYear_Output_DF,on='Year')
 mergeDF3=pd.merge(mergeDF1,mergeDF2,on='Year')
+mergeDF3.head()
 ```
+Year  | Crashes  | Aboard  | Fatalities  | Survived
+------| -------- | ------- | ----------  | --------
+1972  |   104    |
+1968  |   96     | 
+1989  |   95     |
+1967  |   91     |
+1979  |   89     |
+------------- | -------------
+Content Cell  | Content Cell
+Content Cell  | Content Cell
