@@ -24,10 +24,10 @@ I have added few more columns to the original dataset for further Analysis.
 
 Analysis-1 is based on total Statistics of the dataset which explains the following facts:
 
-* planes crashed per year
-* people aboard per year during crashes
-* people dead per year during crashes
-* people survived per year during crashes
+* [planes crashed per year](https://github.com/ruchigupta19/Gupta_Ruchi_Spring2017/blob/master/final/Analysis1Outputs/planesCrashedPerYear_DF.csv)
+* [people aboard per year during crashes](https://github.com/ruchigupta19/Gupta_Ruchi_Spring2017/blob/master/final/Analysis1Outputs/pplAboardPerYear_DF.csv)
+* [people dead per year during crashes](https://github.com/ruchigupta19/Gupta_Ruchi_Spring2017/blob/master/final/Analysis1Outputs/pplDeadPerYear_DF.csv)
+* [people survived per year during crashes](https://github.com/ruchigupta19/Gupta_Ruchi_Spring2017/blob/master/final/Analysis1Outputs/pplSurvivedPerYear_DF.csv)
 
 *Note: I have taken top 50 records in each category to plot these graphs.*
 
