@@ -17,3 +17,11 @@ This Analysis is done on the public dataset **AIRPLANE CRASHES AND FATALITIES SI
 13. Summary - Brief summary of the reason for the crash.
 
 I have added few more columns to the original dataset for further Analysis.
+
+## ANALYSIS -1 ##
+
+Below plotted graph explains:
+* the planes crashed per year
+* people aboard per year during crashes
+* people dead per year during crashes
+* people survived per year during crashes
