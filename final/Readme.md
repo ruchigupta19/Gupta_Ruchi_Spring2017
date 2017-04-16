@@ -57,7 +57,7 @@ Year  | Crashes  | Aboard  | Fatalities  | Survived
 1967  |   91     | 2339    |1789         |550
 1979  |   89     | 2457    |  2011       |446
 
-I have started analyzing the same by adding new columns i.e **Fatalities_Percent** and **Survival_Percent** and same has been calculated as follows:
+I have started analyzing the same by adding new columns i.e **FATALITIES_PERCENT** and **SURVIVAL_PERCENT** and same has been calculated as follows:
 
 ```
 mergeDF3['Fatalities_Percent'] = (mergeDF3['Fatalities']*100)/mergeDF3['Aboard']
@@ -71,8 +71,8 @@ Year  | Crashes  | Aboard  | Fatalities  | Survived | Fatalities_Percent | Survi
 1967  |   91     | 2339    |1789         |550       |76.485678	         |23.514322
 1979  |   89     | 2457    |  2011       |446       |81.847782	         |18.152218
 
-Next step was to give all the crashes a **Crash_Score** and I assigned score=.5 for every crash. 
-I have assigned a **Fatalities_Score** and a **Survival_Score** by assigning score =.5 for every Fatalities_Percent and Survival_Percent
+Next step was to give all the crashes a **CRASH_SCORE** and I assigned score=.5 for every crash. 
+I have assigned a **FATALITIES_SCORE** and a **SURVICAL_SCORE** by assigning score =.5 for every Fatalities_Percent and Survival_Percent
 
 ```
 mergeDF3['Crash_Score'] = mergeDF3['Crashes']*.5
