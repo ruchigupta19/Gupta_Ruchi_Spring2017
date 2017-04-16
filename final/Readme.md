@@ -71,4 +71,12 @@ Year  | Crashes  | Aboard  | Fatalities  | Survived | Fatalities_Percent | Survi
 1967  |   91     | 2339    |1789         |550       |76.485678	         |23.514322
 1979  |   89     | 2457    |  2011       |446       |81.847782	         |18.152218
 
+Next step was to give all the crashes a **Crash_Score** and I assigned score=.5 for every crash
 
+Year  | Crashes  | Aboard  | Fatalities  | Survived | Fatalities_Percent | Survival_Percent | Crash_Score
+------| -------- | ------- | ----------  | -------- | ------------------ | ---------------- | -----------
+1972  |   104    | 3635    |2937         |698       |80.797799	         | 19.202201        | 52.0
+1968  |   96     | 2928    |2156         |772       |73.633880	         |26.366120         | 48.0
+1989  |   95     | 3643    |2293         |1360      |62.942630	         |37.331869         | 47.5
+1967  |   91     | 2339    |1789         |550       |76.485678	         |23.514322         | 45.5
+1979  |   89     | 2457    |  2011       |446       |81.847782	         |18.152218         | 44.5
