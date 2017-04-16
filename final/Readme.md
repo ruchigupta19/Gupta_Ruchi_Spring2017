@@ -57,7 +57,7 @@ Year  | Crashes  | Aboard  | Fatalities  | Survived
 1967  |   91     | 2339    |1789         |550
 1979  |   89     | 2457    |  2011       |446
 
-I have started analyzing the same by adding new columns i.e **Fatalities_Percent** and **Survival_Percent** and same has been calculated as follows:
+I have started analyzing the same by adding new columns i.e ### Fatalities_Percent ### and **Survival_Percent** and same has been calculated as follows:
 
 ```
 mergeDF3['Fatalities_Percent'] = (mergeDF3['Fatalities']*100)/mergeDF3['Aboard']
