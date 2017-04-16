@@ -57,3 +57,18 @@ Year  | Crashes  | Aboard  | Fatalities  | Survived
 1967  |   91     | 2339    |1789         |550
 1979  |   89     | 2457    |  2011       |446
 
+I have started analyzing the same by adding new columns i.e **Fatalities_Percent** and **Survival_Percent** and same has been calculated as follows:
+
+```
+mergeDF3['Fatalities_Percent'] = (mergeDF3['Fatalities']*100)/mergeDF3['Aboard']
+mergeDF3['Survival_Percent'] = (mergeDF3['Survived']*100)/mergeDF3['Aboard']
+```
+Year  | Crashes  | Aboard  | Fatalities  | Survived | Fatalities_Percent | Survival_Percent
+------| -------- | ------- | ----------  | -------- | ------------------ | ----------------
+1972  |   104    | 3635    |2937         |698       |80.797799	         | 19.202201
+1968  |   96     | 2928    |2156         |772       |73.633880	         |26.366120
+1989  |   95     | 3643    |2293         |1360      |62.942630	         |37.331869
+1967  |   91     | 2339    |1789         |550       |76.485678	         |23.514322
+1979  |   89     | 2457    |  2011       |446       |81.847782	         |18.152218
+
+
