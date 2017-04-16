@@ -72,7 +72,7 @@ Year  | Crashes  | Aboard  | Fatalities  | Survived | Fatalities_Percent | Survi
 1979  |   89     | 2457    |  2011       |446       |81.847782	         |18.152218
 
 Next step was to give all the crashes a **CRASH_SCORE** and I assigned score=.5 for every crash. 
-I have assigned a **FATALITIES_SCORE** and a **SURVICAL_SCORE** by assigning score =.5 for every Fatalities_Percent and Survival_Percent
+I have assigned a **FATALITIES_SCORE** and a **SURVIVAL_SCORE** by assigning score =.5 for every Fatalities_Percent and Survival_Percent
 
 ```
 mergeDF3['Crash_Score'] = mergeDF3['Crashes']*.5
@@ -87,3 +87,11 @@ Year  | Crashes  | Aboard  | Fatalities_Percent | Survival_Percent | Crash_Score
 1989  |   95     | 3643    |62.942630	         |37.331869         | 47.5|31.471315	|18.665935
 1967  |   91     | 2339    |76.485678	         |23.514322         | 45.5|38.242839	|11.757161
 1979  |   89     | 2457    |81.847782	         |18.152218         | 44.5|40.923891	|9.076109
+
+I have calculated **TOTAL_SCORE** by adding up CRASH_SCORE and FATALITIES_SCORE and substracting SURVIVAL_SCORE
+
+```
+mergeDF3['Total_Scroe'] = mergeDF3['Crash_Score']+mergeDF3['Fatalities_Score']-mergeDF3['Survival_Score']
+```
+
+
