@@ -75,7 +75,7 @@ Next step was to give all the crashes a **CRASH_SCORE** and I assigned score=1 f
 I have assigned a **FATALITIES_SCORE** and a **SURVIVAL_SCORE** by assigning score =.5 for every Fatalities_Percent and Survival_Percent
 
 ```
-mergeDF3['Crash_Score'] = mergeDF3['Crashes']*.5
+mergeDF3['Crash_Score'] = mergeDF3['Crashes']
 mergeDF3['Fatalities_Score'] = mergeDF3['Fatalities_Percent']/2
 mergeDF3['Survival_Score'] = mergeDF3['Survival_Percent']/2
 ```
