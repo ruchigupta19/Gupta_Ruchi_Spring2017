@@ -71,7 +71,7 @@ Year  | Crashes  | Aboard  | Fatalities  | Survived | Fatalities_Percent | Survi
 1967  |   91     | 2339    |1789         |550       |76.485678	         |23.514322
 1979  |   89     | 2457    |  2011       |446       |81.847782	         |18.152218
 
-Next step was to give all the crashes a **CRASH_SCORE** and I assigned score=.5 for every crash. 
+Next step was to give all the crashes a **CRASH_SCORE** and I assigned score=1 for every crash as an airplane crash is a very important factor and its a big loss to a aviation industry.
 I have assigned a **FATALITIES_SCORE** and a **SURVIVAL_SCORE** by assigning score =.5 for every Fatalities_Percent and Survival_Percent
 
 ```
@@ -82,11 +82,11 @@ mergeDF3['Survival_Score'] = mergeDF3['Survival_Percent']/2
 
 Year  | Crashes  | Aboard  | Fatalities_Percent | Survival_Percent | Crash_Score | Fatalities_Score|Survival_Score
 ------| -------- | ------- | ------------------ | ---------------- | -----------|-------|------
-1972  |   104    | 3635    |80.797799	         | 19.202201        | 52.0|	40.398900|9.601100
-1968  |   96     | 2928    |73.633880	         |26.366120         | 48.0|36.816940	|13.183060
-1989  |   95     | 3643    |62.942630	         |37.331869         | 47.5|31.471315	|18.665935
-1967  |   91     | 2339    |76.485678	         |23.514322         | 45.5|38.242839	|11.757161
-1979  |   89     | 2457    |81.847782	         |18.152218         | 44.5|40.923891	|9.076109
+1972  |   104    | 3635    |80.797799	         | 19.202201        | 104|	40.398900|9.601100
+1968  |   96     | 2928    |73.633880	         |26.366120         | 96|36.816940	|13.183060
+1989  |   95     | 3643    |62.942630	         |37.331869         | 95|31.471315	|18.665935
+1967  |   91     | 2339    |76.485678	         |23.514322         | 91|38.242839	|11.757161
+1979  |   89     | 2457    |81.847782	         |18.152218         | 89|40.923891	|9.076109
 
 I have calculated **TOTAL_SCORE** by adding up CRASH_SCORE and FATALITIES_SCORE and substracting SURVIVAL_SCORE
 
