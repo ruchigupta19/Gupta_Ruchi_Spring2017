@@ -57,7 +57,7 @@ Year  | Crashes  | Aboard  | Fatalities  | Survived
 1967  |   91     | 2339    |1789         |550
 1979  |   89     | 2457    |  2011       |446
 
-I have started analyzing the same by adding new columns i.e ## Fatalities_Percent ## and **Survival_Percent** and same has been calculated as follows:
+I have started analyzing the same by adding new columns i.e **Fatalities_Percent** and **Survival_Percent** and same has been calculated as follows:
 
 ```
 mergeDF3['Fatalities_Percent'] = (mergeDF3['Fatalities']*100)/mergeDF3['Aboard']
@@ -82,8 +82,8 @@ mergeDF3['Survival_Score'] = mergeDF3['Survival_Percent']/2
 
 Year  | Crashes  | Aboard  | Fatalities_Percent | Survival_Percent | Crash_Score | Fatalities_Score|Survival_Score
 ------| -------- | ------- | ------------------ | ---------------- | -----------|-------|------
-1972  |   104    | 3635    |80.797799	         | 19.202201        | 52.0|
-1968  |   96     | 2928    |73.633880	         |26.366120         | 48.0|
-1989  |   95     | 3643    |62.942630	         |37.331869         | 47.5|
-1967  |   91     | 2339    |76.485678	         |23.514322         | 45.5|
-1979  |   89     | 2457    |81.847782	         |18.152218         | 44.5|
+1972  |   104    | 3635    |80.797799	         | 19.202201        | 52.0|	40.398900|9.601100
+1968  |   96     | 2928    |73.633880	         |26.366120         | 48.0|36.816940	|13.183060
+1989  |   95     | 3643    |62.942630	         |37.331869         | 47.5|31.471315	|18.665935
+1967  |   91     | 2339    |76.485678	         |23.514322         | 45.5|38.242839	|11.757161
+1979  |   89     | 2457    |81.847782	         |18.152218         | 44.5|40.923891	|9.076109
