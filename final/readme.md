@@ -52,10 +52,11 @@ Entire home/apt|   1393
 Private room  |   1061       
 Shared room  |   52     
 
+![alt tag](https://github.com/ruchigupta19/Gupta_Ruchi_Spring2017/blob/master/final/Output%20Graphs/Analysis%20-%201/Room_Type_.PNG)
 
 I categorized different listings based upon their property type which gave the following results:
 ```
 propertytype_DF = inputDF.groupby('property_type').id.count()
 ```
-
+![alt tag](https://github.com/ruchigupta19/Gupta_Ruchi_Spring2017/blob/master/final/Output%20Graphs/Analysis%20-%201/Property_Type.PNG)
 
