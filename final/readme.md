@@ -11,3 +11,31 @@ In this Project, I am going to explore the Airbnb data of Boston which includes 
 **calendar.csv** consists of details of listings and its availability and its price.
 
 **reviews.csv** consits of reveiws for each listing in Boston
+
+This includes 5 analysis on Boston Airbnb open dataset with the help of which I tried to answer questions like What are the busiest times to visit Boston? busiest neighborhoods in Boston? seasonal pattern of airbnb housing price? and many more
+
+## ANALYSIS - 1
+## What causes difference in Prices of listings?
+
+*Data Wrangling:* I have collected, cleaned and transformed data by levaraging pandas and numpy to be used for performing meaningful analysis.
+
+```
+# replacing NaN values with 0
+inputDF.fillna(0, inplace=True)
+
+#clean the data to make it float
+for p in price:
+    p=float(p[1:].replace(',',''))
+    prices.append(p)
+
+#exclude the listings with 0 for price,beds,bedrooms,accomodates etc
+inputDF = inputDF[inputDF.bathrooms >0]
+inputDF = inputDF[inputDF.bedrooms > 0]
+inputDF = inputDF[inputDF.beds > 0]
+inputDF = inputDF[inputDF.price  > 0]
+inputDF = inputDF[inputDF.review_scores_rating  > 0]
+inputDF = inputDF[inputDF.reviews_per_month > 0]
+inputDF = inputDF[inputDF.accommodates  > 0]
+inputDF.head()
+```
+Cleaned and transformed data can be accessed here
