@@ -378,6 +378,8 @@ Memorial Day	|190.034305
 Labor Day|	189.907829
 New Year's Day (Observed)	|183.823384
 
+![alt tag](https://github.com/ruchigupta19/Gupta_Ruchi_Spring2017/blob/master/final/Output%20Graphs/Analysis%20-%203/price_holidays.PNG)
+
 ### 3rd Data Point:
 
 It can be observed that the maximum average price of listings is for **columbus day** and that mean Columbus day is the busiest US long weekend holiday for Boston.
