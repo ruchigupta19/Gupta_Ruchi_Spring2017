@@ -324,6 +324,7 @@ for index,row in calendarDF.iterrows():
 ```
 
 Output data consisting days and holidays information can be accessed [here]()
+
 Added 3 new columns Day_Name, Holiday and us_holiday_name which counsits of name of the day, boolean value for "is it a holiday?" and reason for the holiday respectively.
 
 Trying to find a trend of avergae prices for a week
@@ -333,6 +334,96 @@ Trying to find a trend of avergae prices for a week
 
 dayDF=calendarDF.groupby('day_Name').price.mean()
 ```
+day_Name	|Average_Price|	day_num
+-----------|-------------|---------
+Monday	|195.809561	|1
+Tuesday|	195.173842|	2
+Wednesday|	195.418228	|3
+Thursday|	198.073112	|4
+Friday|	203.121167	|5
+Saturday|	203.408387|	6
+Sunday	|198.219764|	7
 
+It can be seen that the average price of listings increases on weekends and are usual on weekdays.Lets plot it to get a better understanding
 
+![alt tag](https://github.com/ruchigupta19/Gupta_Ruchi_Spring2017/blob/master/final/Output%20Graphs/Analysis%20-%203/trend_week.PNG)
+
+### 2nd Data Point
+It can be seen that the prices are fairly high for the weekends than that of weekdays.Now we need to dig in into Sept 2016 and oct 2016 data to find the reason behind increase in Average prices. 
+
+Analyzing all the holidays
+
+```
+#checking which holiday has maximum listings
+
+holidayDF=calendarDF.groupby('us_holidays_name').listing_id.count()
+```
+![alt tag](https://github.com/ruchigupta19/Gupta_Ruchi_Spring2017/blob/master/final/Output%20Graphs/Analysis%20-%203/listing%20holidays.PNG)
+
+It can be seen that the maximum number of listings is for thanksgiving which can be reasoned as its a very popular holiday.Lets dig in further to find which holiday has the maximum average price.
+
+```
+holidayPriceDF=calendarDF.groupby('us_holidays_name').price.mean()
+```
+us_holidays_name	|price
+-----------------|--------------
+Columbus Day	|237.838101
+Veterans Day	|205.283324
+Thanksgiving	|200.077407
+Christmas Day	|198.380805
+Independence Day|	197.900737
+Christmas Day (Observed)|	196.901139
+New Year's Day	|191.555994
+Memorial Day	|190.034305
+Labor Day|	189.907829
+New Year's Day (Observed)	|183.823384
+
+### 3rd Data Point:
+
+It can be observed that the maximum average price of listings is for **columbus day** and that mean Columbus day is the busiest US long weekend holiday for Boston.
+
+Lets dig in into september 2016 and october 2016 data to find the reason for increase in average prices.
+
+```
+#analyzing data of september and october
+
+checkHolidaysDF=calendarDF[(calendarDF['Year'] == '2016') & ((calendarDF['Month'] == '09') |(calendarDF['Month'] == '10'))]
+checkHolidaysDF=checkHolidaysDF.groupby(['Year','Month','holiday']).price.mean()
+```
+Year	|Month|	holiday|	price
+-------|-------|--------|---------
+2016	|09	|False|	252.677308
+2016	|10	False	|233.264468
+2016	|10	True	|237.838101
+
+```
+#analyzing longweekednd holiday days
+
+columbusDF=calendarDF[(calendarDF['Year'] == '2016') & (calendarDF['Month'] == '10' ) & ((calendarDF['Day'] == '08') | (calendarDF['Day'] == '09') | (calendarDF['Day'] == '10'))]
+columbusDF.groupby('Month').price.mean()
+```
+Output: 244.633573
+
+```
+#analyzing rest of the days
+
+NocolumbusDF=calendarDF[(calendarDF['Year'] == '2016') & (calendarDF['Month'] == '10' ) & ((calendarDF['Day'] != '08') | (calendarDF['Day'] != '09') | (calendarDF['Day'] != '10'))]
+NocolumbusDF.groupby('Month').price.mean()
+```
+
+Output:  233.416248
+
+### 4th Data Point:
+
+It can be analyzed that on a long weekend the average price is 244.63 while for the whole month the average price was 233.Hence, this suggests that the price of listings increses with the presence of long weekend.
+
+analyzing data from date 5th of October to date 13th of October which includes both long weekend and normal workdays
+```
+octDF=calendarDF[(calendarDF['Year'] == '2016') & (calendarDF['Month'] == '10' )& ((calendarDF['Day'] == '05' )| (calendarDF['Day'] == '06' )| (calendarDF['Day'] == '07' )| (calendarDF['Day'] == '08' )| (calendarDF['Day'] == '09' )| (calendarDF['Day'] == '10' )| (calendarDF['Day'] == '10' )| (calendarDF['Day'] == '11' )| (calendarDF['Day'] == '12' )| (calendarDF['Day'] == '13' ))]
+octDF=octDF.groupby('Day').price.mean()
+```
+
+![alt tag](https://github.com/ruchigupta19/Gupta_Ruchi_Spring2017/blob/master/final/Output%20Graphs/Analysis%20-%203/days%20average%20price.PNG)
+
+hence its can be seen that Long weekends have higher prices of listings which gives us another data point that price of a listing increases with the presence of Long weekend.
 
