@@ -275,10 +275,12 @@ After combining all the data points collected from above analysis it can be conc
 3. While listing the property on AirBnB, keywords describing the area should be added in order to gain the attention of travellers
 
 It needs to be analyzed that how prices of listings vary with seasons which constitutes the next analysis in which I tried to find out how prices vary according to season,month,week,day
+
 ---
 ## ANALYSIS - 3
 ## SEASONAL PATTERN OF PRICES
 ---
+
 *Data Wrangling:* I have collected, cleaned and transformed **calendar.csv** data by levaraging pandas and numpy to be used for performing meaningful analysis.
 
 ```
