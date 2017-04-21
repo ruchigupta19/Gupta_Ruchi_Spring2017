@@ -261,11 +261,15 @@ Bay Village	|walk bay bed arlington bedroom
 
 Click here to have a look at [complete list](https://github.com/ruchigupta19/Gupta_Ruchi_Spring2017/blob/master/final/Output%20csv/top_words_description.csv)
 
+### 5th Data Point:
+I can be observed that for neighborhood "South Boston Waterfront" major words include seaport, "Hyde Park" includes quiet, "East Boston" includes airport, downtown, station and chinatown includes theatre.All these observations shows that these words are unique to a particular neighborhood which gives us another data point that while listing the property on airbnb these words should definitely be included to attract travellers.
+
 ## Conclusion: 
 After combining all the data points collected from above analysis it can be concluded that:
 
 1. Invest a property in a wealthy neighborhood and according to this analysis that neighborhood should be 'Back Bay' and 'South End' as they have maximum number of listings and average prices in these neighborhood is fairly high.
 2. After buying an Apartment, listing an entire Apartment on Airbnb will help to generate maximum revenue.
+3. While listing the property on AirBnB, keywords describing the area should be added in order to gain the attention of travellers
 
 It needs to be analyzed that how prices of listings vary with seasons which constitutes the next analysis in which I tried to find out how prices vary according to season,month,week,day
 
