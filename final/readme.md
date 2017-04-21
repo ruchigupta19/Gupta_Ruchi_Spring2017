@@ -227,6 +227,40 @@ Now lets visualize average price of these listings on the basis of neighbourhood
 ### 4th Data Point:
 By analyzing the number of listings and prices per neighborhood, we can get a clearer understanding of how accurate the average price is per neighborhood. The neighorhoods with a lot of listings (such as South End & Back Bay), we can expect a more accurate average prices. However, neighborhoods with less than 100 listings might have relatively inaccurate average prices due to presence of outliers. Looking at the analysis done so far, one might conclude that certain neighborhoods are more 'expensive' than others.
 
+For next analysis I have compiled a list of keywords for differnt neighborhoods in Boston which should be included while writing description about the listing on Airbnb.
+
+```
+#function to clean the data and compile a list of most common words
+def cleanData(neighbrhood_name,descrip):
+    p = re.sub('[^a-zA-Z]+',' ', descrip)
+    cmn_words=['The','I','Boston','room']
+    descrip_data=nltk.word_tokenize(p)
+    filtered_data=[word.lower() for word in descrip_data if word not in cmn_words if word not in stopwords.words('english')] 
+    wnl = nltk.WordNetLemmatizer() 
+    counts=Counter([wnl.lemmatize(data) for data in filtered_data])
+    commn_words=[]
+    for w in counts.most_common(5):
+        commn_words.append(w[0])
+    return ' '.join(commn_words)
+```
+
+```
+#calling function and adding returned data to dataframe
+for a in summ.items():
+    top5words=cleanData(a[0],a[1])
+    final_DF_neighbrhood=final_DF_neighbrhood.append(pd.Series([a[0],top5words],index=['neighborhood','top 5 words in description']),ignore_index=True)
+```
+
+neighborhood	|top 5 words in description
+----------------|------------------------------------
+Roslindale	|roslindale minute guest house neighborhood
+Jamaica Plain	|jamaica walk minute neighborhood bedroom
+Mission Hill	|apartment bed bedroom walk medical
+Longwood Medical Area	|longwood bathroom access kitchen medical
+Bay Village	|walk bay bed arlington bedroom
+
+Click here to have a look at [complete list]()
+
 ## Conclusion: 
 After combining all the data points collected from above analysis it can be concluded that:
 
