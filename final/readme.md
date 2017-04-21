@@ -105,8 +105,24 @@ I have created a wordcloud for the same and to plot it I have cleaned the data b
 It can be seen that unique words like home, south Boston, bedroom, floor, kitchen, restaurant, spacious, neighborhood ,located are very commonly words used when hosts are describing their homes. This is making sense because the primary purpose of airbnb is not to provide luxury hotel suites but just a convinient place to stay.Naturally hosts understand these purposes and create their summaries based on location and requirements in order to attract as many travellers as they can. So if hosts are not able to attract too many travellers then they can add these keywords to their summaries in order to attract travellers to choose their listings.
 
 Now trying to analyze how the amenities provided by the listing is related to the price of the same.To analyze the same I have plotted two diferent wordclouds which in turn helped me to find out what extra emenities are provided by listings with higher price.
+```
+#Data collection
+for index,row in amenitiesDFtop.iterrows():
+    p = re.sub('[^a-zA-Z]+',' ', row['amenities'])
+    allemenities+=p
+   
+#tokenizing
+allemenities_data=nltk.word_tokenize(allemenities)
+
+#lemitizing
+wnl = nltk.WordNetLemmatizer() 
+allemenities_data=[wnl.lemmatize(data) for data in filtered_data]
+```
 
 ![alt tag](https://github.com/ruchigupta19/Gupta_Ruchi_Spring2017/blob/master/final/Output%20Graphs/Analysis%20-%201/amenities.PNG)
+
+### 5th Data Point:
+It can be clearly seen that listings with higher prices have extra eminities such as Air conditioning, washer/dryer, Kid friendly, Heating, hair dryer, buzzer and *Extra emenities comes with extra prices*
 
 ## Conclusion: 
 It can be concluded that prices of listings depends upon following factors:
@@ -115,3 +131,4 @@ It can be concluded that prices of listings depends upon following factors:
 2. The type of property chosen by the traveller and it can be analyzed that Townhouse and houses are the properties with maximum prices and apartments, houses take up an overwhelming majority of all listings.
 3. Price of a listing also depends upon the number of bedrooms the property have and the same also depends upon the neighborhood of the property
 4. the summary section is the one which helps to attract travellers and analyzed that presence of  unique words like home, south Boston, bedroom, floor, kitchen, restaurant, spacious, neighborhood ,located words tends to attract more travellers
+5. with the increase in prices the eminities provided by host also increases.
