@@ -1,4 +1,4 @@
-![alt tag]()
+![alt tag](https://github.com/ruchigupta19/Gupta_Ruchi_Spring2017/blob/master/final/Airbnb%20logo/Airbnb.png)
 # BOSTON AIRBNB OPEN DATA ANALYSIS
 
 In this Project, I am going to explore the Airbnb data of Boston which includes 3 files:
