@@ -445,4 +445,4 @@ After adding up all the analyis done so far for observing seasonal changes in pr
 ## ANALYSIS - 4 <img align="right" src="https://github.com/ruchigupta19/Gupta_Ruchi_Spring2017/blob/master/final/Airbnb%20logo/a4.gif">
 ## SENTIMENT ANALYSIS OF REVIEWS
 
-
+There are so many factors which contributes towards the price of a listing on AirBnB.While, we already have few conclusions for relationship between various factors and their dependency on prices of a listing,lets analyze if price of a listing dependent upon number of reviews and if yes, how does it varies?
