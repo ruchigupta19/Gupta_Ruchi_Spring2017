@@ -299,7 +299,40 @@ Cleaning of data has been done and added new columns namely Year,Month and Day b
 ```
 yearDF=calendarDF.groupby(['Year','Month']).price.mean()
 ```
-Data can be accessed from [here]()
+Data can be accessed from [here](https://github.com/ruchigupta19/Gupta_Ruchi_Spring2017/blob/master/final/Output%20csv/year_month_data.csv)
 
 It can be seen that the data is available from September 2016 to September 2017 and when average prices are analyzed maximum rates for the listings were in the month of september.Visualizing the same for a better understanding.
+
+![alt tag](https://github.com/ruchigupta19/Gupta_Ruchi_Spring2017/blob/master/final/Output%20Graphs/Analysis%20-%203/trend.PNG)
+
+### 1st Data Point:
+It can be clearly seen that the maximum average price for listings were in the month of september and October 2016 and the reason is because of good weather and Massachussetts' best time to observe fall colors.Fall Colors in Massachusetts attracts a lot of visitors which makes September and October peak months for Airbnb hosts. 
+
+To analyze the data further, I have extracted name of the day from given date and checked weather it was a holiday and what is the reason for that holiday using datetime, clendar and holidays modules of python.
+
+```
+calendarDF.fillna(0, inplace=True)
+us_holidays = holidays.US()
+```
+```
+for index,row in calendarDF.iterrows():
+    sdate = datetime.date(int(row['Year']),int(row['Month']),int(row['Day']))
+    vall=date(int(row['Year']),int(row['Month']),int(row['Day'])) in us_holidays
+    calendarDF.set_value(index,'day_Name',calendar.day_name[sdate.weekday()])
+    calendarDF.set_value(index,'holiday',vall)
+    calendarDF.set_value(index,'us_holidays_name',us_holidays.get(sdate))
+```
+
+Output data consisting days and holidays information can be accessed [here]()
+Added 3 new columns Day_Name, Holiday and us_holiday_name which counsits of name of the day, boolean value for "is it a holiday?" and reason for the holiday respectively.
+
+Trying to find a trend of avergae prices for a week
+
+```
+#calculating Average price for each day
+
+dayDF=calendarDF.groupby('day_Name').price.mean()
+```
+
+
 
