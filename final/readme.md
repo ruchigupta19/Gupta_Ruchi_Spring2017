@@ -60,3 +60,8 @@ propertytype_DF = inputDF.groupby('property_type').id.count()
 ```
 ![alt tag](https://github.com/ruchigupta19/Gupta_Ruchi_Spring2017/blob/master/final/Output%20Graphs/Analysis%20-%201/Property_Type.PNG)
 
+#### 1st Data point:
+It can be concluded that people are more inclined towards listing their entire property than that of private rooms or shared rooms.It can also be seen that property type also plays an important factor. Not surprisingly, Apartment and houses take up an overwhelming majority of all listings, although we do see few instances unfamiliar residencies here and there.
+
+
+
