@@ -53,9 +53,9 @@ Private room  |   1061
 Shared room  |   52     
 
 
-
 I categorized different listings based upon their property type which gave the following results:
 ```
 propertytype_DF = inputDF.groupby('property_type').id.count()
 ```
+
 
