@@ -152,7 +152,7 @@ Entire home/apt|   232.322326
 Private room  |   89.505184       
 Shared room  |   69.903846 
 
-### !st Data Point: 
+### 1st Data Point: 
 It clearly shows that Average Price of Entire home/Apartment is very high when compared to Private room and shared room.It can be concluded that Entire home/Apartment room type has the maximum average price which gives us a data point that after buying an Apartment, listing it as an entire Apartment on Airbnb will help to generate maximum revenue.
 
 I have plotted Geographical Clusters to find out which area in Boston has maximum listings on Airbnb and to get a better understand of which is best neighborhood to invest a property.
@@ -169,3 +169,70 @@ location_private = private[['latitude', 'longitude']]
 location_shared = shared[['latitude', 'longitude']]
 ```
 ![alt tag](https://github.com/ruchigupta19/Gupta_Ruchi_Spring2017/blob/master/final/Output%20Graphs/Analysis%20-%202/map.PNG)
+where,
+
+1. Blue circles indicates Entire Apartment/home listings 
+2. red circle indicates private room listings 
+3. green indicates shared listings
+
+It can be seen that Wealthier neighborhoods, mainly South End, north end, Fenway park and back bay have a higher proportion of listings for an entire apartment while Less central and poorer neighborhoods have a disproportionate number of listings from multi-unit listers.For example, Allston, there are only listings with private room. 
+
+### 2nd Data Point:
+this analysis gives us another data point that Wealthier neighborhoods should be chosen for property investment. 
+
+Analyzing data on Entire Apartments/home to find the right location to invest property.
+```
+# grouping neighbourhood by number of listings
+
+neighbourhood_DF=home.groupby('neighbourhood_cleansed').id.count()
+```
+
+```
+# grouping neighbourhood by average price of listings
+
+neighbourhoodPrice_DF=home.groupby('neighbourhood_cleansed').price.mean()
+```
+```
+#Merging above two dataframes
+
+mergeDF=pd.merge(neighbourhood_DF,neighbourhoodPrice_DF,on='neighbourhood_cleansed')
+mergeDF.head()
+```
+
+neighbourhood_cleansed	|Number_Of_Listings	|Average_Price
+------------------------|-------------------|-------------
+South End	|165	|245.290909
+Back Bay	|157	|280.006369
+Jamaica Plain	|125	|211.160000
+Fenway	|113	|240.398230
+Beacon Hill	|101	|255.178218
+
+visualizing the frequency of listings on the basis of neighbourhood where room type is entire apartment
+
+![alt tag](https://github.com/ruchigupta19/Gupta_Ruchi_Spring2017/blob/master/final/Output%20Graphs/Analysis%20-%202/niighborhood_freq.PNG)
+
+### 3rd Data Point:
+It can be noticed that the maximum number of listings for entire apartment for Boston on Airbnb is in South End area followed by back bay and Jamaica plain.So these area become potential neighbourhood to invest a property
+
+Exploring the relationship between price and neighbourhood
+
+![alt tag](https://github.com/ruchigupta19/Gupta_Ruchi_Spring2017/blob/master/final/Output%20Graphs/Analysis%20-%202/price_n_neighborhood.PNG)
+
+It can be analyzed that the maximum price is reached for Back Bay and soutn end.
+
+Now lets visualize average price of these listings on the basis of neighbourhood where room type is entire apartment
+
+![alt tag](https://github.com/ruchigupta19/Gupta_Ruchi_Spring2017/blob/master/final/Output%20Graphs/Analysis%20-%202/neighborhood_average_Price.PNG)
+
+### 4th Data Point:
+By analyzing the number of listings and prices per neighborhood, we can get a clearer understanding of how accurate the average price is per neighborhood. The neighorhoods with a lot of listings (such as South End & Back Bay), we can expect a more accurate average prices. However, neighborhoods with less than 100 listings might have relatively inaccurate average prices due to presence of outliers. Looking at the analysis done so far, one might conclude that certain neighborhoods are more 'expensive' than others.
+
+## Conclusion: 
+After combining all the data points collected from above analysis it can be concluded that:
+
+1. Invest a property in a wealthy neighborhood and according to this analysis that neighborhood should be 'Back Bay' and 'South End' as they have maximum number of listings and average prices in these neighborhood is fairly high.
+2. After buying an Apartment, listing an entire Apartment on Airbnb will help to generate maximum revenue.
+
+It needs to be analyzed that how prices of listings vary with seasons which constitutes the next analysis in which I tried to find out how prices vary according to season,month,week,day
+
+
