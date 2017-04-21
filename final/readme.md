@@ -132,3 +132,40 @@ It can be concluded that prices of listings depends upon following factors:
 3. Price of a listing also depends upon the number of bedrooms the property have and the same also depends upon the neighborhood of the property
 4. the summary section is the one which helps to attract travellers and analyzed that presence of  unique words like home, south Boston, bedroom, floor, kitchen, restaurant, spacious, neighborhood ,located words tends to attract more travellers
 5. with the increase in prices the eminities provided by host also increases.
+
+## ANALYSIS - 2
+## Where to Invest a Property in BOSTON to get maximum returns from Airbnb?
+
+It has been analyzed earlier that the maximum number of listings are for Entire Home/Apartment. Lets check average prices for these listings based on room type.
+
+```
+# Average prices for each type of listing
+
+avgPrice_DF=inputDF.groupby('room_type').price.mean()
+avgPrice_DF=avgPrice_DF.reset_index()
+avgPrice_DF=avgPrice_DF.rename(columns={'price':'average_Price'})
+avgPrice_DF
+```
+Room Type  | Average Price
+------| --------  
+Entire home/apt|   232.322326    
+Private room  |   89.505184       
+Shared room  |   69.903846 
+
+### !st Data Point: 
+It clearly shows that Average Price of Entire home/Apartment is very high when compared to Private room and shared room.It can be concluded that Entire home/Apartment room type has the maximum average price which gives us a data point that after buying an Apartment, listing it as an entire Apartment on Airbnb will help to generate maximum revenue.
+
+I have plotted Geographical Clusters to find out which area in Boston has maximum listings on Airbnb and to get a better understand of which is best neighborhood to invest a property.
+
+```
+# seggregating each type of property
+
+home = inputDF[(inputDF.room_type == 'Entire home/apt')]
+private = inputDF[(inputDF.room_type == 'Private room')]
+shared = inputDF[(inputDF.room_type == 'Shared room')]
+
+location_home = home[['latitude', 'longitude']]
+location_private = private[['latitude', 'longitude']]
+location_shared = shared[['latitude', 'longitude']]
+```
+![alt tag]
