@@ -168,4 +168,4 @@ location_home = home[['latitude', 'longitude']]
 location_private = private[['latitude', 'longitude']]
 location_shared = shared[['latitude', 'longitude']]
 ```
-![alt tag]
+![alt tag](https://github.com/ruchigupta19/Gupta_Ruchi_Spring2017/blob/master/final/Output%20Graphs/Analysis%20-%202/map.PNG)
