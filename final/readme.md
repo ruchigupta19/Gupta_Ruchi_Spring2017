@@ -87,5 +87,11 @@ It can be analyzed that with the increase in the number of bedrooms price of lis
 So the analysis gives us data points that the prices of listings on Airbnb depends upon the room type, property type, number of bedrooms and neighbourhood.It can be seen that the property with type as Apartment and the listing as with type as entire house with maximum number of bedooms has highest price.Although it depends upon neighbourhood as well which is analyzed in the next analysis
 
 Now that we've seen how property types and room types along with neighborhood can affect the listing prices, let's investigate the summary.
-
-
+```
+summaryDF = inputDF[['summary','price']]
+summaryDF = summaryDF[pd.notnull(summaryDF['summary'])]
+summaryDF = summaryDF[summaryDF['summary']!=0]
+summaryDF = summaryDF.sort_values('price',ascending=[0])
+top100DF = summaryDF.head(100)
+top100DF.head()
+```
