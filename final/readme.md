@@ -38,4 +38,12 @@ inputDF = inputDF[inputDF.reviews_per_month > 0]
 inputDF = inputDF[inputDF.accommodates  > 0]
 inputDF.head()
 ```
-Cleaned and transformed data can be accessed here
+Cleaned and transformed data can be accessed [here](https://github.com/ruchigupta19/Gupta_Ruchi_Spring2017/blob/master/final/Output%20csv/cleaned_Data.csv)  
+
+then I categorized different listings based upon their room type which gave the following results:
+
+Room Type  | Number Of Listings
+------| --------  
+Entire home/apt|   1393    
+Private room  |   1061       
+Shared room  |   52     
