@@ -15,9 +15,10 @@ In this Project, I am going to explore the Airbnb data of Boston which includes 
 
 This includes 5 analysis on Boston Airbnb open dataset with the help of which I tried to answer questions like What are the busiest times to visit Boston? busiest neighborhoods in Boston? seasonal pattern of airbnb housing price? and many more
 
+---
 ## ANALYSIS - 1
 ## WHAT CAUSES DIFFERENCE IN PRICES OF LISTINGS?
-
+---
 *Data Wrangling:* I have collected, cleaned and transformed **listings.csv** data by levaraging pandas and numpy to be used for performing meaningful analysis.
 
 ```
