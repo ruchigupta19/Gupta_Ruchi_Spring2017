@@ -16,9 +16,9 @@ In this Project, I am going to explore the Airbnb data of Boston which includes 
 This includes 5 analysis on Boston Airbnb open dataset with the help of which I tried to answer questions like What are the busiest times to visit Boston? busiest neighborhoods in Boston? seasonal pattern of airbnb housing price? and many more
 
 ## ANALYSIS - 1
-## What causes difference in Prices of listings?
+## WHAT CAUSES DIFFERENCE IN PRICES OF LISTINGS?
 
-*Data Wrangling:* I have collected, cleaned and transformed data by levaraging pandas and numpy to be used for performing meaningful analysis.
+*Data Wrangling:* I have collected, cleaned and transformed **listings.csv** data by levaraging pandas and numpy to be used for performing meaningful analysis.
 
 ```
 # replacing NaN values with 0
@@ -134,7 +134,7 @@ It can be concluded that prices of listings depends upon following factors:
 5. with the increase in prices the eminities provided by host also increases.
 
 ## ANALYSIS - 2
-## Where to Invest a Property in BOSTON to get maximum returns from Airbnb?
+## WHERE TO INVEST A PROPERTY IN BOSTON TO GET MAXIMUM RETURNS FROM AIRBNB?
 
 It has been analyzed earlier that the maximum number of listings are for Entire Home/Apartment. Lets check average prices for these listings based on room type.
 
@@ -273,4 +273,33 @@ After combining all the data points collected from above analysis it can be conc
 
 It needs to be analyzed that how prices of listings vary with seasons which constitutes the next analysis in which I tried to find out how prices vary according to season,month,week,day
 
+## ANALYSIS - 3
+## SEASONAL PATTERN OF PRICES
+
+*Data Wrangling:* I have collected, cleaned and transformed **calendar.csv** data by levaraging pandas and numpy to be used for performing meaningful analysis.
+
+```
+#replacing NaN values with 0
+calendarDF.fillna(0, inplace=True)
+calendarDF = calendarDF[calendarDF.price != 0]
+```
+
+```
+#Extracting prices from the table
+price = calendarDF['price']
+prices=[]
+
+for p in price:
+    p = re.sub('[^0-9.]+','', p)
+    prices.append(float(p))
+```
+
+Cleaning of data has been done and added new columns namely Year,Month and Day by splitting date.I analyzed the data by group it on the basis of Year and Month to see the trend of prices.
+
+```
+yearDF=calendarDF.groupby(['Year','Month']).price.mean()
+```
+Data can be accessed from [here]()
+
+It can be seen that the data is available from September 2016 to September 2017 and when average prices are analyzed maximum rates for the listings were in the month of september.Visualizing the same for a better understanding.
 
