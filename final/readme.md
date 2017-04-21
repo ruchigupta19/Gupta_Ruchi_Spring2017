@@ -42,9 +42,20 @@ inputDF.head()
 Cleaned and transformed data can be accessed [here](https://github.com/ruchigupta19/Gupta_Ruchi_Spring2017/blob/master/final/Output%20csv/cleaned_Data.csv)  
 
 then I categorized different listings based upon their room type which gave the following results:
+```
+roomType_DF=inputDF.groupby('room_type').id.count()
+```
 
 Room Type  | Number Of Listings
 ------| --------  
 Entire home/apt|   1393    
 Private room  |   1061       
 Shared room  |   52     
+
+GRPAH-1
+
+I categorized different listings based upon their property type which gave the following results:
+```
+propertytype_DF = inputDF.groupby('property_type').id.count()
+```
+
