@@ -134,10 +134,9 @@ It can be concluded that prices of listings depends upon following factors:
 4. the summary section is the one which helps to attract travellers and analyzed that presence of  unique words like home, south Boston, bedroom, floor, kitchen, restaurant, spacious, neighborhood ,located words tends to attract more travellers
 5. with the increase in prices the eminities provided by host also increases.
 
----
-## ANALYSIS - 2
+
+## ANALYSIS - 2 <img align="right" src="https://github.com/ruchigupta19/Gupta_Ruchi_Spring2017/blob/master/final/Airbnb%20logo/a2.gif">
 ## WHERE TO INVEST A PROPERTY IN BOSTON TO GET MAXIMUM RETURNS FROM AIRBNB?
----
 
 It has been analyzed earlier that the maximum number of listings are for Entire Home/Apartment. Lets check average prices for these listings based on room type.
 
@@ -276,10 +275,10 @@ After combining all the data points collected from above analysis it can be conc
 
 It needs to be analyzed that how prices of listings vary with seasons which constitutes the next analysis in which I tried to find out how prices vary according to season,month,week,day
 
----
-## ANALYSIS - 3
+
+## ANALYSIS - 3 <img align="right" src="https://github.com/ruchigupta19/Gupta_Ruchi_Spring2017/blob/master/final/Airbnb%20logo/a3.gif">
 ## SEASONAL PATTERN OF PRICES
----
+
 
 *Data Wrangling:* I have collected, cleaned and transformed **calendar.csv** data by levaraging pandas and numpy to be used for performing meaningful analysis.
 
@@ -442,8 +441,8 @@ After adding up all the analyis done so far for observing seasonal changes in pr
 2. If the taveller is on low budget then he should avoid visiting Boston on Weekends as prices of listings on weekend are higher than that of weekdays.
 3. Prices of listings also depends upon US holidays and longweeknds.Prices on long weekends and US holidays are higher than compared to other days.So for a low budget travel, a traveller should avoid travelling on a long weekend,Specially the long weekend of October i.e columbus day.
 
----
-## ANALYSIS - 4
+
+## ANALYSIS - 4 <img align="right" src="https://github.com/ruchigupta19/Gupta_Ruchi_Spring2017/blob/master/final/Airbnb%20logo/a4.gif">
 ## SENTIMENT ANALYSIS OF REVIEWS
----
+
 
