@@ -52,7 +52,7 @@ Entire home/apt|   1393
 Private room  |   1061       
 Shared room  |   52     
 
-GRPAH-1
+
 
 I categorized different listings based upon their property type which gave the following results:
 ```
