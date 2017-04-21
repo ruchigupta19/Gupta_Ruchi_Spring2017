@@ -395,8 +395,8 @@ checkHolidaysDF=checkHolidaysDF.groupby(['Year','Month','holiday']).price.mean()
 Year	|Month|	holiday|	price
 -------|-------|--------|---------
 2016	|09	|False|	252.677308
-2016	|10	False	|233.264468
-2016	|10	True	|237.838101
+2016	|10	|False	|233.264468
+2016	|10	|True	|237.838101
 
 ```
 #analyzing longweekednd holiday days
@@ -427,5 +427,5 @@ octDF=octDF.groupby('Day').price.mean()
 
 ![alt tag](https://github.com/ruchigupta19/Gupta_Ruchi_Spring2017/blob/master/final/Output%20Graphs/Analysis%20-%203/days%20average%20price.PNG)
 
-hence its can be seen that Long weekends have higher prices of listings which gives us another data point that price of a listing increases with the presence of Long weekend.
+hence this graph clearly shows that Long weekends have higher prices of listings than that of normal days which gives us another data point that price of a listing increases with the presence of Long weekend.
 
