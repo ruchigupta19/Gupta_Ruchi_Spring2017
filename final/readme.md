@@ -95,3 +95,11 @@ summaryDF = summaryDF.sort_values('price',ascending=[0])
 top100DF = summaryDF.head(100)
 top100DF.head()
 ```
+
+This will give us summary and price for all the listings. I have chosen top 100 listings on the basis of price to find out what all common words are used by hosts while posting a listing on airbnb.
+I have created a wordcloud for the same and to plot it I have cleaned the data by removing punctuation, unwanted characters and numbers.After that I have also removed all the stopwords.I have lemmatized it using WordNetLemmatizer from NTLK and plotted a wordcloud for the same to visualize the most common words these hosts utilized to describe their listings on AIRBNB.
+
+![alt tag](https://github.com/ruchigupta19/Gupta_Ruchi_Spring2017/blob/master/final/Output%20Graphs/Analysis%20-%201/wordcloud.PNG)
+
+### 4th Data Point:
+It can be seen that unique words like home, south Boston, bedroom, floor, kitchen, restaurant, spacious, neighborhood ,located are very commonly words used when hosts are describing their homes. This is making sense because the primary purpose of airbnb is not to provide luxury hotel suites but just a convinient place to stay.Naturally hosts understand these purposes and create their summaries based on location and requirements in order to attract as many travellers as they can. So if hosts are not able to attract too many travellers then they can add these keywords to their summaries in order to attract travellers to choose their listings.
