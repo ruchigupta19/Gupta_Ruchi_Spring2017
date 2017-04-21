@@ -259,7 +259,7 @@ Mission Hill	|apartment bed bedroom walk medical
 Longwood Medical Area	|longwood bathroom access kitchen medical
 Bay Village	|walk bay bed arlington bedroom
 
-Click here to have a look at [complete list]()
+Click here to have a look at [complete list](https://github.com/ruchigupta19/Gupta_Ruchi_Spring2017/blob/master/final/Output%20csv/top_words_description.csv)
 
 ## Conclusion: 
 After combining all the data points collected from above analysis it can be concluded that:
