@@ -460,3 +460,78 @@ listing_id	|id|reviewer_id|comments	|polarity_value	|neg	|pos	|neu	|compound
 1178162	|4724140|	4298113	|My stay at islam's place was really cool! Good...	|{'neg': 0.0, 'neu': 0.648, 'pos': 0.352, 'comp...|	0.0	|0.352|	0.648	|0.9626
 1178162	|4869189|6452964|Great location for both airport and city - gre...	|{'neg': 0.0, 'neu': 0.639, 'pos': 0.361, 'comp...	|0.0|	0.361	|0.639|	0.9061
 
+Our data presented in teh dataframe consists of comments in various language while we are concrened only with commenst in English language.In the next section I am removing all those rwos which consists of comments in different language than that of English using langdetect library.
+
+```
+def detect_lang(sente):
+    sente=str(sente)
+    try:
+        return detect(sente)
+    except:
+        return "None"
+```
+
+```
+#taking rows whose language is English
+EngReviewsDF=reviewsDF[reviewsDF.language=='en']
+```
+
+listing_id	|id|reviewer_id|comments	|polarity_value	|neg	|pos	|neu	|compound |language
+------------|-----|---------------|--------------|------------------|------|--------|-------|-------------|----
+1178162	|4724140|	4298113	|My stay at islam's place was really cool! Good...	|{'neg': 0.0, 'neu': 0.648, 'pos': 0.352, 'comp...|	0.0	|0.352|	0.648	|0.9626|en
+
+I created graphs to visualize the positive, negative anf neutral score by dividing thernage from 0.0 to 1.0 and counting the reviews between this range.
+
+```
+polarDF=EngReviewsDF[['pos']]
+polarDF=polarDF.groupby(pd.cut(polarDF["pos"], np.arange(0, 1.1, 0.1))).count()
+polarDFneg=polarDFneg.groupby(pd.cut(polarDFneg["neg"], np.arange(0, 1.1, 0.1))).count()
+polarDFnut=polarDFnut.groupby(pd.cut(polarDFnut["neu"], np.arange(0, 1.0, 0.1))).count()
+```
+
+count_of_Comments	|RANGE	|Sentiment
+-------------------|---------|---------
+2143	|0.0|	positive
+11940	|0.1	|positive
+18092	|0.0	|negative
+1447	|0.1	|negative
+9|	0.0	|neutrl
+204	|0.1	|neutrl
+
+Plotted a factorgraph to undersatnd and compare the sentiments of comments travellers mentioned on the listings.
+
+![alt tag]()
+
+### 1st Data Point:
+
+It can be seen that Almost none of the texts are classified as having significant amounts of negativity. In fact, a significant amount of them are given exactly 0.0 negativity.It can be clearly seen that most of the comments are neutral.However, a signifigant amount of comments are positive.
+
+We can loosely interpret number of reviews as times people have stayed in the said listing. Of course, this depends on when the listing appeared, how long it appeared for, and various other factors. But it could serve to be useful information to see correlation between price and number of reviews.Lets check if there is any relationship between number of reviews and price of listing.
+
+```
+price_review = inputDF[['number_of_reviews', 'price']].sort_values(by = 'price')
+```
+
+![alt tag]()
+
+### 2nd Data Point:
+
+The graph shows that listings with prices that range around 100 - 400 get the most reviews, probably because they are in the most reasonable price range. The number quickly declines as the price goes up.
+This indicates that more people book listings that are around $100 - 400 in prices.
+This shows that it is not necessary for an expensive listing to have large number of reviews.Heneforth there is no exact relation between Prices and Number of Reviews for a listing.
+
+Lets analyze what were the most talked about words in all the comments.
+
+```
+for index,row in EngReviewsDF.iterrows():
+    words += row['comments']
+words_only = [''.join(c for c in s if c not in string.punctuation if c not in nums if c not in ignoreChar) for s in reviews_data]
+comments_filtered_data = ' '.join([word.lower() for word in comments_filtered_data.split() if word not in cachedStopWords])
+
+```
+
+```
+wordcloud = WordCloud(width = 1000, height = 700).generate(comments_filtered_data)
+```
+
+![alt tag]()
