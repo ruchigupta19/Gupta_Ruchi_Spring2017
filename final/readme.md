@@ -453,5 +453,10 @@ reviewsDF = reviewsDF.dropna()
 ```
 
 To retrieve the 'sentiment' of comments - 'positive','negative' or 'neutral' I am using built-in analyzer in the NLTK Python library to assign polarity scoore to each comment.I have assigned Ploarity score to every comment which includes detail like Positivity, negativity 
-neutral and compound
+neutral and compound.
+
+listing_id	|id|	date	|reviewer_id|	reviewer_name	|comments	|polarity_value	|neg	|pos	|neu	|compound
+------------|-----|------|-----------|-----------------|-----------|------------------|------|--------|-------|-------------
+1178162	|4724140|	2013-05-21|	4298113	|Olivier	|My stay at islam's place was really cool! Good...	|{'neg': 0.0, 'neu': 0.648, 'pos': 0.352, 'comp...|	0.0	|0.352|	0.648	|0.9626
+1178162	|4869189	|2013-05-29	|6452964|	Charlotte	|Great location for both airport and city - gre...	|{'neg': 0.0, 'neu': 0.639, 'pos': 0.361, 'comp...	|0.0|	0.361	|0.639|	0.9061
 
