@@ -535,3 +535,16 @@ wordcloud = WordCloud(width = 1000, height = 700).generate(comments_filtered_dat
 ```
 
 ![alt tag](https://github.com/ruchigupta19/Gupta_Ruchi_Spring2017/blob/master/final/Output%20Graphs/Analysis%20-%204/cloud.PNG)
+
+It can be seen that the most talked about words are "great location", "great host", "walking distance" and "highly recommended".All these reviews and comments plays a big role in attracting the attention of travellers and if there are comments such as "highly recommended" then travellers surely takes a look at the listing.
+
+## Conlcusions:
+
+1. It can be clearly seen that most of the comments are neutral and a signifigant amount of comments are positive and almost none of the texts are classified as having significant amounts of negativity.
+2. Its clearly visible that listings with prices that range around 100 - 400 get the most reviews, probably because they are in the most reasonable price range. The number quickly declines as the price goes up.
+3. the most talked about words are "great location", "great host", "walking distance" and "highly recommended".All these reviews and comments plays a big role in attracting the attention of travellers
+
+## ANALYSIS - 5 <img align="right" src="https://github.com/ruchigupta19/Gupta_Ruchi_Spring2017/blob/master/final/Airbnb%20logo/a5.gif">
+## RECOMMENDATION SYSTEM FOR PRICES
+
+
