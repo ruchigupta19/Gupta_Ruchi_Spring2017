@@ -500,7 +500,7 @@ count_of_Comments	|RANGE	|Sentiment
 
 Plotted a factorgraph to undersatnd and compare the sentiments of comments travellers mentioned on the listings.
 
-![alt tag]()
+![alt tag](https://github.com/ruchigupta19/Gupta_Ruchi_Spring2017/blob/master/final/Output%20Graphs/Analysis%20-%204/sentiment.PNG)
 
 ### 1st Data Point:
 
@@ -512,7 +512,7 @@ We can loosely interpret number of reviews as times people have stayed in the sa
 price_review = inputDF[['number_of_reviews', 'price']].sort_values(by = 'price')
 ```
 
-![alt tag]()
+![alt tag](https://github.com/ruchigupta19/Gupta_Ruchi_Spring2017/blob/master/final/Output%20Graphs/Analysis%20-%204/reviews.PNG)
 
 ### 2nd Data Point:
 
@@ -534,4 +534,4 @@ comments_filtered_data = ' '.join([word.lower() for word in comments_filtered_da
 wordcloud = WordCloud(width = 1000, height = 700).generate(comments_filtered_data)
 ```
 
-![alt tag]()
+![alt tag](https://github.com/ruchigupta19/Gupta_Ruchi_Spring2017/blob/master/final/Output%20Graphs/Analysis%20-%204/cloud.PNG)
