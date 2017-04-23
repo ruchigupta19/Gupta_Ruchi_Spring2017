@@ -547,6 +547,108 @@ It can be seen that the most talked about words are "great location", "great hos
 3. the most talked about words are "great location", "great host", "walking distance" and "highly recommended".All these reviews and comments plays a big role in attracting the attention of travellers
 
 ## ANALYSIS - 5 <img align="right" src="https://github.com/ruchigupta19/Gupta_Ruchi_Spring2017/blob/master/final/extra/a5.gif">
-## RECOMMENDATION SYSTEM FOR PRICES
+## HOST ANALYSIS & RECOMMENDATION SYSTEM FOR PRICES
+
+Lets analyze the trend of people hosting AirBnBs in Boston.We can get insights about how much more popular is AirBnB among hosts now than it was two or three years ago.
+To analyze the same I cleaned the data and separated the host_since date in various columns such as day, date and year and plotted a graph for number of host registered vs each day of the year
+
+```
+join_dates = pd.to_datetime(inputDF['host_since']).value_counts().resample('D').mean().fillna(0)
+```
+
+![alt tag](https://github.com/ruchigupta19/Gupta_Ruchi_Spring2017/blob/master/final/Analysis/Output%20Graphs/Analysis%20-%205/day.PNG)
+
+I have plotted the same data for each year.
+```
+yearDF=inputDF.groupby(['year']).id.count()
+```
+
+![alt tag](https://github.com/ruchigupta19/Gupta_Ruchi_Spring2017/blob/master/final/Analysis/Output%20Graphs/Analysis%20-%205/year.PNG)
+
+It can be analyzed that Most of the hosts registered in the year 2015.Lets analyze the months
+
+```
+yearMonth=inputDF.groupby(['year','month']).id.count()
+yearMonth=yearMonth.sort_values(['year','month'],ascending=[1,1])
+```
+![alt tag](https://github.com/ruchigupta19/Gupta_Ruchi_Spring2017/blob/master/final/Analysis/Output%20Graphs/Analysis%20-%205/month.PNG)
+
+it can be seen that most of the hosts registered in the month of july,november and march.Although there is no specific trend followed.Lets check do people register more on weekends?
+I have plotted the same where 0 corresponds for mondays and 6 corresponds to sunday
+```
+pd.to_datetime(inputDF['host_since']).dt.dayofweek.value_counts().sort_index().plot(kind='bar')
+```
+
+![alt tag](https://github.com/ruchigupta19/Gupta_Ruchi_Spring2017/blob/master/final/Analysis/Output%20Graphs/Analysis%20-%205/dasy.PNG)
+
+It shows that people tend to register more on Mondays than any other day of the week.
+
+## Recommendation System
+
+After analyzing and looking at all the factors which contributes towards deciding the price of a listing I ma trying to develop a recommendation system for determining the price of test data while training the system on the training data.
+
+I am only considering the columns on which Prices are found to be dependent as the original dataset consists of so many unwanted columns.I have cleaned the dataset by removing arows 0 as their number of bedrooms, batrooms ,beds and converted the price column data into a float to perform operations on the same.
+Data is presented in categorial form.Hence I am using pandas' get_dummies function to convert Categorial variables into indicator variables.
+
+```
+#this will create 4 columns namely flexible, moderate, strict, super_strict_30 which are its categories
+
+cancel_policy = pd.get_dummies(inputDF.cancellation_policy).astype(int)
+cancel_policy.head()
+```
+flexible	|moderate	|strict	|super_strict_30
+-------|---------------|-------|-----------------
+0	|1	|0	|0
+0	|1	|0	|0
+
+```
+# Similiarly converting remaining categorial column,instant_booking  into indiactor variables
+
+instant_booking = pd.get_dummies(inputDF.instant_bookable, prefix = 'instant_booking').astype(int)
+room_type = pd.get_dummies(inputDF.room_type).astype(int)
+```
+Now when I have all the categorial data turned into indicator variables,original columns can be dropped and can be replaced by new columns containing indicator variables for the same.
+
+```
+# drop original columns and replace them with indicator columns
+
+inputDF = inputDF.drop(['cancellation_policy', 'instant_bookable', 'room_type'], axis = 1)
+inputDF = pd.concat((inputDF, cancel_policy, instant_booking, room_type), axis = 1)
+```
+I have splitted all the amenities and counted the number of amenities and replaced amenities in teh dataframe by this column.
+
+Now after converting all our data into indicator variables we can separateour data into test and train sets using scikit learn's train_test_split function
+
+```
+split_data= inputDF.drop(['price'],axis=1)
+train1,test1,train2,test2=cross_validation.train_test_split(split_data,inputDF.price, test_size=0.4,train_size = 0.6,random_state=13)
+```
+
+```
+# Lets analyze if linear regression can predict the prices accurately
+# mean of prices
+mean = np.mean(inputDF.price)
+
+# standard deviation to compare 
+std = np.std(inputDF.price)
+
+print("mean: " + str(mean))
+print ("standard deviation: " + str(std))
+```
+mean: 168.4856344772546
+standard deviation: 117.47652969451681
+
+```
+# linear regression testing
+linear_reg = linear_model.LinearRegression()
+linear_reg.fit(train1, train2)
+linear_reg_error = metrics.median_absolute_error(test2, linear_reg.predict(test1))
+print ("Linear Regression: " + str(linear_reg_error))
+```
+Linear Regression: 34.7018093101
+
+This is a small recommendation system which I built using linear Regression.It is not accurate and gives an error of $34.70 in price.The future scope of this project could be using different algorithm to predict accurate pricesof test data.
+
+
 
 
