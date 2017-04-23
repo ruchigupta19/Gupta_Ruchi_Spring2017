@@ -170,7 +170,7 @@ location_home = home[['latitude', 'longitude']]
 location_private = private[['latitude', 'longitude']]
 location_shared = shared[['latitude', 'longitude']]
 ```
-![alt tag](https://github.com/ruchigupta19/Gupta_Ruchi_Spring2017/tree/master/final/Analysis/Output%20Graphs/Analysis%20-%202/map.PNG)
+![alt tag](https://github.com/ruchigupta19/Gupta_Ruchi_Spring2017/blob/master/final/Analysis/Output%20Graphs/Analysis%20-%202/map.PNG)
 where,
 
 1. Blue circles indicates Entire Apartment/home listings 
