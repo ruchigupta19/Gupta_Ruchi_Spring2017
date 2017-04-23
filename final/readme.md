@@ -211,20 +211,20 @@ Beacon Hill	|101	|255.178218
 
 visualizing the frequency of listings on the basis of neighbourhood where room type is entire apartment
 
-![alt tag](https://github.com/ruchigupta19/Gupta_Ruchi_Spring2017/tree/master/final/Analysis/Output%20Graphs/Analysis%20-%202/niighborhood_freq.PNG)
+![alt tag](https://github.com/ruchigupta19/Gupta_Ruchi_Spring2017/blob/master/final/Analysis/Output%20Graphs/Analysis%20-%202/niighborhood_freq.PNG)
 
 ### 3rd Data Point:
 It can be noticed that the maximum number of listings for entire apartment for Boston on Airbnb is in South End area followed by back bay and Jamaica plain.So these area become potential neighbourhood to invest a property
 
 Exploring the relationship between price and neighbourhood
 
-![alt tag](https://github.com/ruchigupta19/Gupta_Ruchi_Spring2017/tree/master/final/Analysis/Output%20Graphs/Analysis%20-%202/price_n_neighborhood.PNG)
+![alt tag](https://github.com/ruchigupta19/Gupta_Ruchi_Spring2017/blob/master/final/Analysis/Output%20Graphs/Analysis%20-%202/price_n_neighborhood.PNG)
 
 It can be analyzed that the maximum price is reached for Back Bay and soutn end.
 
 Now lets visualize average price of these listings on the basis of neighbourhood where room type is entire apartment
 
-![alt tag](https://github.com/ruchigupta19/Gupta_Ruchi_Spring2017/tree/master/final/Analysis/Output%20Graphs/Analysis%20-%202/neighborhood_average_Price.PNG)
+![alt tag](https://github.com/ruchigupta19/Gupta_Ruchi_Spring2017/blob/master/final/Analysis/Output%20Graphs/Analysis%20-%202/neighborhood_average_Price.PNG)
 
 ### 4th Data Point:
 By analyzing the number of listings and prices per neighborhood, we can get a clearer understanding of how accurate the average price is per neighborhood. The neighorhoods with a lot of listings (such as South End & Back Bay), we can expect a more accurate average prices. However, neighborhoods with less than 100 listings might have relatively inaccurate average prices due to presence of outliers. Looking at the analysis done so far, one might conclude that certain neighborhoods are more 'expensive' than others.
@@ -307,7 +307,7 @@ Data can be accessed from [here](https://github.com/ruchigupta19/Gupta_Ruchi_Spr
 
 It can be seen that the data is available from September 2016 to September 2017 and when average prices are analyzed maximum rates for the listings were in the month of september.Visualizing the same for a better understanding.
 
-![alt tag](https://github.com/ruchigupta19/Gupta_Ruchi_Spring2017/tree/master/final/Analysis/Output%20Graphs/Analysis%20-%203/trend.PNG)
+![alt tag](https://github.com/ruchigupta19/Gupta_Ruchi_Spring2017/blob/master/final/Analysis/Output%20Graphs/Analysis%20-%203/trend.PNG)
 
 ### 1st Data Point:
 It can be clearly seen that the maximum average price for listings were in the month of september and October 2016 and the reason is because of good weather and Massachussetts' best time to observe fall colors.Fall Colors in Massachusetts attracts a lot of visitors which makes September and October peak months for Airbnb hosts. 
@@ -350,7 +350,7 @@ Sunday	|198.219764|	7
 
 It can be seen that the average price of listings increases on weekends and are usual on weekdays.Lets plot it to get a better understanding
 
-![alt tag](https://github.com/ruchigupta19/Gupta_Ruchi_Spring2017/tree/master/final/Analysis/Output%20Graphs/Analysis%20-%203/trend_week.PNG)
+![alt tag](https://github.com/ruchigupta19/Gupta_Ruchi_Spring2017/blob/master/final/Analysis/Output%20Graphs/Analysis%20-%203/trend_week.PNG)
 
 ### 2nd Data Point
 It can be seen that the prices are fairly high for the weekends than that of weekdays.Now we need to dig in into Sept 2016 and oct 2016 data to find the reason behind increase in Average prices. 
@@ -362,7 +362,7 @@ Analyzing all the holidays
 
 holidayDF=calendarDF.groupby('us_holidays_name').listing_id.count()
 ```
-![alt tag](https://github.com/ruchigupta19/Gupta_Ruchi_Spring2017/tree/master/final/Analysis/Output%20Graphs/Analysis%20-%203/listing%20holidays.PNG)
+![alt tag](https://github.com/ruchigupta19/Gupta_Ruchi_Spring2017/blob/master/final/Analysis/Output%20Graphs/Analysis%20-%203/listing%20holidays.PNG)
 
 It can be seen that the maximum number of listings is for thanksgiving which can be reasoned as its a very popular holiday.Lets dig in further to find which holiday has the maximum average price.
 
@@ -382,7 +382,7 @@ Memorial Day	|190.034305
 Labor Day|	189.907829
 New Year's Day (Observed)	|183.823384
 
-![alt tag](https://github.com/ruchigupta19/Gupta_Ruchi_Spring2017/tree/master/final/Analysis/Output%20Graphs/Analysis%20-%203/price_holidays.PNG)
+![alt tag](https://github.com/ruchigupta19/Gupta_Ruchi_Spring2017/blob/master/final/Analysis/Output%20Graphs/Analysis%20-%203/price_holidays.PNG)
 
 ### 3rd Data Point:
 
@@ -429,7 +429,7 @@ octDF=calendarDF[(calendarDF['Year'] == '2016') & (calendarDF['Month'] == '10' )
 octDF=octDF.groupby('Day').price.mean()
 ```
 
-![alt tag](https://github.com/ruchigupta19/Gupta_Ruchi_Spring2017/tree/master/final/Analysis/Output%20Graphs/Analysis%20-%203/days%20average%20price.PNG)
+![alt tag](https://github.com/ruchigupta19/Gupta_Ruchi_Spring2017/blob/master/final/Analysis/Output%20Graphs/Analysis%20-%203/days%20average%20price.PNG)
 
 hence this graph clearly shows that Long weekends have higher prices of listings than that of normal days which gives us another data point that price of a listing increases with the presence of Long weekend.
 
@@ -502,7 +502,7 @@ count_of_Comments	|RANGE	|Sentiment
 
 Plotted a factorgraph to undersatnd and compare the sentiments of comments travellers mentioned on the listings.
 
-![alt tag](https://github.com/ruchigupta19/Gupta_Ruchi_Spring2017/tree/master/final/Analysis/Output%20Graphs/Analysis%20-%204sentiment.PNG)
+![alt tag](https://github.com/ruchigupta19/Gupta_Ruchi_Spring2017/blob/master/final/Analysis/Output%20Graphs/Analysis%20-%204/sentiment.PNG)
 
 ### 1st Data Point:
 
@@ -514,7 +514,7 @@ We can loosely interpret number of reviews as times people have stayed in the sa
 price_review = inputDF[['number_of_reviews', 'price']].sort_values(by = 'price')
 ```
 
-![alt tag](https://github.com/ruchigupta19/Gupta_Ruchi_Spring2017/tree/master/final/Analysis/Output%20Graphs/Analysis%20-%204reviews.PNG)
+![alt tag](https://github.com/ruchigupta19/Gupta_Ruchi_Spring2017/blob/master/final/Analysis/Output%20Graphs/Analysis%20-%204/reviews.PNG)
 
 ### 2nd Data Point:
 
@@ -536,7 +536,7 @@ comments_filtered_data = ' '.join([word.lower() for word in comments_filtered_da
 wordcloud = WordCloud(width = 1000, height = 700).generate(comments_filtered_data)
 ```
 
-![alt tag](https://github.com/ruchigupta19/Gupta_Ruchi_Spring2017/tree/master/final/Analysis/Output%20Graphs/Analysis%20-%204cloud.PNG)
+![alt tag](https://github.com/ruchigupta19/Gupta_Ruchi_Spring2017/blob/master/final/Analysis/Output%20Graphs/Analysis%20-%204/cloud.PNG)
 
 It can be seen that the most talked about words are "great location", "great host", "walking distance" and "highly recommended".All these reviews and comments plays a big role in attracting the attention of travellers and if there are comments such as "highly recommended" then travellers surely takes a look at the listing.
 
