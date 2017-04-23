@@ -1,4 +1,4 @@
-![alt tag](https://github.com/ruchigupta19/Gupta_Ruchi_Spring2017/blob/master/final/Airbnb%20logo/airsmall.png)
+![alt tag](https://github.com/ruchigupta19/Gupta_Ruchi_Spring2017/blob/master/final/extra/airsmall.png)
 # BOSTON AIRBNB OPEN DATA ANALYSIS
 
 In this Project, I am going to explore the Airbnb data of Boston which includes 3 files:
@@ -16,7 +16,7 @@ In this Project, I am going to explore the Airbnb data of Boston which includes 
 This includes 5 analysis on Boston Airbnb open dataset with the help of which I tried to answer questions like What are the busiest times to visit Boston? busiest neighborhoods in Boston? seasonal pattern of airbnb housing price? and many more
 
 
-## ANALYSIS - 1 <img align="right" style="width:350px;height:125px;margin-top:0px;padding-top:0px;" src="https://github.com/ruchigupta19/Gupta_Ruchi_Spring2017/blob/master/final/Airbnb%20logo/a1.gif">
+## ANALYSIS - 1 <img align="right" style="width:350px;height:125px;margin-top:0px;padding-top:0px;" src="https://github.com/ruchigupta19/Gupta_Ruchi_Spring2017/blob/master/final/extra/a1.gif">
 ## WHAT CAUSES DIFFERENCE IN PRICES OF LISTINGS?
 
 *Data Wrangling:* I have collected, cleaned and transformed **listings.csv** data by levaraging pandas and numpy to be used for performing meaningful analysis.
@@ -40,7 +40,7 @@ inputDF = inputDF[inputDF.reviews_per_month > 0]
 inputDF = inputDF[inputDF.accommodates  > 0]
 inputDF.head()
 ```
-Cleaned and transformed data can be accessed [here](https://github.com/ruchigupta19/Gupta_Ruchi_Spring2017/blob/master/final/Output%20csv/cleaned_Data.csv)  
+Cleaned and transformed data can be accessed [here](https://github.com/ruchigupta19/Gupta_Ruchi_Spring2017/blob/master/final/Analysis/Output%20csv/cleaned_Data.csv)  
 
 then I categorized different listings based upon their room type which gave the following results:
 ```
@@ -53,13 +53,13 @@ Entire home/apt|   1393
 Private room  |   1061       
 Shared room  |   52     
 
-![alt tag](https://github.com/ruchigupta19/Gupta_Ruchi_Spring2017/blob/master/final/Output%20Graphs/Analysis%20-%201/Room_Type_.PNG)
+![alt tag](https://github.com/ruchigupta19/Gupta_Ruchi_Spring2017/blob/master/final/Analysis/Output%20Graphs/Analysis%20-%201/Room_Type_.PNG)
 
 I categorized different listings based upon their property type which gave the following results:
 ```
 propertytype_DF = inputDF.groupby('property_type').id.count()
 ```
-![alt tag](https://github.com/ruchigupta19/Gupta_Ruchi_Spring2017/blob/master/final/Output%20Graphs/Analysis%20-%201/Property_Type.PNG)
+![alt tag](https://github.com/ruchigupta19/Gupta_Ruchi_Spring2017/blob/master/final/Analysis/Output%20Graphs/Analysis%20-%201/Property_Type.PNG)
 
 ### 1st Data point:
 It can be concluded that people are more inclined towards listing their entire property than that of private rooms or shared rooms.It can also be seen that property type also plays an important factor. Not surprisingly, Apartment and houses take up an overwhelming majority of all listings, although we do see few instances unfamiliar residencies here and there.
@@ -69,18 +69,18 @@ Now analyzing the prices for different room type and property type and plotted a
 ```
 roomProperty_DF = inputDF.groupby(['property_type','room_type']).price.mean()
 ```
-![alt tag](https://github.com/ruchigupta19/Gupta_Ruchi_Spring2017/blob/master/final/Output%20Graphs/Analysis%20-%201/mean.PNG)
+![alt tag](https://github.com/ruchigupta19/Gupta_Ruchi_Spring2017/blob/master/final/Analysis/Output%20Graphs/Analysis%20-%201/mean.PNG)
 
 While plotting the same on a heat map:
 
-![alt tag](https://github.com/ruchigupta19/Gupta_Ruchi_Spring2017/blob/master/final/Output%20Graphs/Analysis%20-%201/heat1.PNG)
+![alt tag](https://github.com/ruchigupta19/Gupta_Ruchi_Spring2017/blob/master/final/Analysis/Output%20Graphs/Analysis%20-%201/heat1.PNG)
 
 ### 2nd Data point:
 This chart allows us to see all the listings' prices broken down by property type and room type. This gives us a much better understanding of the price breakdown in Boston based on property and room types. It can be analyzed that for almost all property type,prices for Entire home/apartment is the maximum.This tells us that Property type and room type plays a very important role in deciding price of a listing.
 
 Lets see how the number of bedrooms available affects the price of a listing.
 
-![alt tag](https://github.com/ruchigupta19/Gupta_Ruchi_Spring2017/blob/master/final/Output%20Graphs/Analysis%20-%201/Heat2.PNG)
+![alt tag](https://github.com/ruchigupta19/Gupta_Ruchi_Spring2017/blob/master/final/Analysis/Output%20Graphs/Analysis%20-%201/Heat2.PNG)
 
 ### 3rd Data Point:
 It can be analyzed that with the increase in the number of bedrooms price of listing increases.Although, it depends upon the neighbourhood as well.
@@ -100,7 +100,7 @@ top100DF.head()
 This will give us summary and price for all the listings. I have chosen top 100 listings on the basis of price to find out what all common words are used by hosts while posting a listing on airbnb.
 I have created a wordcloud for the same and to plot it I have cleaned the data by removing punctuation, unwanted characters and numbers.After that I have also removed all the stopwords.I have lemmatized it using WordNetLemmatizer from NTLK and plotted a wordcloud for the same to visualize the most common words these hosts utilized to describe their listings on AIRBNB.
 
-![alt tag](https://github.com/ruchigupta19/Gupta_Ruchi_Spring2017/blob/master/final/Output%20Graphs/Analysis%20-%201/wordcloud.PNG)
+![alt tag](https://github.com/ruchigupta19/Gupta_Ruchi_Spring2017/blob/master/final/Analysis/Output%20Graphs/Analysis%20-%201/wordcloud.PNG)
 
 ### 4th Data Point:
 It can be seen that unique words like home, south Boston, bedroom, floor, kitchen, restaurant, spacious, neighborhood ,located are very commonly words used when hosts are describing their homes. This is making sense because the primary purpose of airbnb is not to provide luxury hotel suites but just a convinient place to stay.Naturally hosts understand these purposes and create their summaries based on location and requirements in order to attract as many travellers as they can. So if hosts are not able to attract too many travellers then they can add these keywords to their summaries in order to attract travellers to choose their listings.
@@ -120,7 +120,7 @@ wnl = nltk.WordNetLemmatizer()
 allemenities_data=[wnl.lemmatize(data) for data in filtered_data]
 ```
 
-![alt tag](https://github.com/ruchigupta19/Gupta_Ruchi_Spring2017/blob/master/final/Output%20Graphs/Analysis%20-%201/amenities.PNG)
+![alt tag](https://github.com/ruchigupta19/Gupta_Ruchi_Spring2017/blob/master/final/Analysis/Output%20Graphs/Analysis%20-%201/amenities.PNG)
 
 ### 5th Data Point:
 It can be clearly seen that listings with higher prices have extra eminities such as Air conditioning, washer/dryer, Kid friendly, Heating, hair dryer, buzzer and *Extra emenities comes with extra prices*
